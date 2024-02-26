@@ -1,5 +1,65 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`block-component > bind-frontmatter 1`] = `
+{
+  "children": [
+    {
+      "attributes": {},
+      "children": [],
+      "data": {
+        "hName": "bind-frontmatter",
+        "hProperties": {
+          ":array": "[\\"item\\",{\\":itemKey\\":\\"value\\"}]",
+          ":key": "value",
+        },
+      },
+      "fmAttributes": {
+        ":key": "value",
+        "array": [
+          "item",
+          {
+            ":itemKey": "value",
+          },
+        ],
+      },
+      "name": "bind-frontmatter",
+      "position": {
+        "end": {
+          "column": 3,
+          "line": 8,
+          "offset": 77,
+        },
+        "start": {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "rawData": "
+:key: value
+array:
+  - item
+  - :itemKey: value
+---",
+      "type": "containerComponent",
+    },
+  ],
+  "position": {
+    "end": {
+      "column": 3,
+      "line": 8,
+      "offset": 77,
+    },
+    "start": {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
 exports[`block-component > dangling-list 1`] = `
 {
   "children": [

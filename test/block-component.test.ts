@@ -18,6 +18,9 @@ describe('block-component', () => {
     frontmatter: {
       markdown: '::with-frontmatter\n---\nkey: value\narray:\n  - item\n  - itemKey: value\n---\n::'
     },
+    'bind-frontmatter': {
+      markdown: '::bind-frontmatter\n---\n:key: value\narray:\n  - item\n  - :itemKey: value\n---\n::'
+    },
     frontmatter1: {
       markdown: [
         '::with-frontmatter',
