@@ -48,6 +48,9 @@ describe('Attributes', () => {
     },
     emphasis: {
       markdown: '_emphasis_{#id .class}'
+    },
+    'nested-attributes': {
+      markdown: '_**[Nuxt](https://nuxtjs.org){#id .class} strong**{#id2 .class2} emphasis_{#id3 .class3}'
     }
   })
 })
