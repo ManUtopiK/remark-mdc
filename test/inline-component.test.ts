@@ -4,7 +4,16 @@ import { runMarkdownTests } from './utils'
 describe('inline-component', () => {
   runMarkdownTests({
     empty: {
-      markdown: ':component text'
+      markdown: ':component text',
+      extra (_markdown, ast, _expected) {
+        expect(ast.children[0].type).toEqual('paragraph')
+      }
+    },
+    alone: {
+      markdown: ':component',
+      extra (_markdown, ast, _expected) {
+        expect(ast.children[0].type).toEqual('paragraph')
+      }
     },
     text: {
       markdown: ':component[text] text'
