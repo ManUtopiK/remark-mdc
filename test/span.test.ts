@@ -76,7 +76,17 @@ describe('span', async () => {
       expected: '- [ ] task 1\n- [x] task 2'
     },
     'respect-reference-style-link': {
-      markdown: '[link][ref]\n\n[ref]: http://example.com'
+      markdown: '[link][ref]\n\n[ref]: http://example.com',
+      extra (_markdown, ast, _expected) {
+        expect(ast.children[0].children[0].type).toEqual('linkReference')
+      }
+    },
+    'respect-reference-style-link2': {
+      markdown: '[link][ref]{.class}\n\n[ref]: http://example.com',
+      extra (_markdown, ast, _expected) {
+        expect(ast.children[0].children[0].type).toEqual('linkReference')
+        expect(ast.children[0].children[0].attributes).toEqual({ class: 'class' })
+      }
     },
     'ignore-double-bracket': {
       markdown: '[[wikilink]]',
